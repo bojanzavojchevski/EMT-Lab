@@ -133,4 +133,20 @@ public class Accommodation {
     public void setNumRooms(Integer numRooms) {
         this.numRooms = numRooms;
     }
+
+    public int rentOneRoom() {
+        if (this.numRooms == null || this.numRooms <= 0) {
+            throw new IllegalStateException("Accommodation has no available rooms.");
+        }
+
+        this.numRooms = this.numRooms - 1;
+        this.rented = this.numRooms == 0;
+        this.updatedAt = LocalDateTime.now();
+
+        return this.numRooms;
+    }
+
+    public boolean isFullyOccupied() {
+        return this.numRooms != null && this.numRooms == 0;
+    }
 }
