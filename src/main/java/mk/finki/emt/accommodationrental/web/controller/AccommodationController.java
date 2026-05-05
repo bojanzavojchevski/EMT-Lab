@@ -1,4 +1,4 @@
-package mk.finki.emt.accommodationrental.web;
+package mk.finki.emt.accommodationrental.web.controller;
 
 import jakarta.validation.Valid;
 import mk.finki.emt.accommodationrental.model.dto.AccommodationEntityGraphDto;
